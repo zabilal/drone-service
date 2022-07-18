@@ -19,10 +19,10 @@ public class UserRestController {
     private UserService userService;
 
     @GetMapping
-    public ResponseEntity<UserListDTO> getUserPresentationList() {
-        List<UserDTO> list = userService.getUserPresentationList();
+    public ResponseEntity<UserListDTO> getAllUser() {
+        List<UserDTO> list = userService.getAllUser();
         UserListDTO userListDTO = new UserListDTO();
-        list.stream().forEach(e -> userListDTO.getUserList().add(e));
+        list.forEach(e -> userListDTO.getUserList().add(e));
         return ResponseEntity.ok(userListDTO);
     }
 

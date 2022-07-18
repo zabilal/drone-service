@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 /**
  * Create or modify user data
@@ -22,7 +23,7 @@ public class CreateOrUpdateUserDTO implements Serializable {
     private String name;
     private String surname;
     private String gender;
-    private java.time.LocalDate birthDate;
+    private LocalDate birthDate;
 
     private boolean enabled;
     private boolean secured;

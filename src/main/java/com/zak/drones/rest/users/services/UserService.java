@@ -64,7 +64,7 @@ public class UserService {
         phoneValidator = new PhoneValidator();
     }
 
-    public List<UserDTO> getUserPresentationList() {
+    public List<UserDTO> getAllUser() {
         ArrayList<UserDTO> listDto = new ArrayList<>();
         Iterable<User> list = getUserList();
         list.forEach(e -> listDto.add(new UserDTO(e)));

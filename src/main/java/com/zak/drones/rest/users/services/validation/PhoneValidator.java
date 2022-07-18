@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 // https://howtodoinjava.com/regex/java-regex-validate-international-phone-numbers/
 public class PhoneValidator {
 
-    private static int MAX_PHONE_LENGTH = 50;
+    private static final int MAX_PHONE_LENGTH = 50;
 
     private static final String PHONE_REGEX = "^\\+(?:[0-9] ?){6,14}[0-9]$";
 
