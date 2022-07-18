@@ -62,7 +62,7 @@ public class DroneService {
         return createdDrone;
     }
 
-    public List<DroneDTO> getDronePresentationList() {
+    public List<DroneDTO> getAllDrones() {
         ArrayList<DroneDTO> listDto = new ArrayList<>();
         Iterable<Drone> list = getDroneList();
         list.forEach(drone -> listDto.add(new DroneDTO(drone)));
