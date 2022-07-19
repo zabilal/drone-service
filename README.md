@@ -10,7 +10,9 @@ The solution is thought using the Docker technologies with two different contain
 #### System Architecture
 Below are the architecture and flow that came to mind
 
-src/main/resources/images/Drone Dispatch Flow.drawio.png
+https://github.com/zabilal/drone-service/blob/main/src/main/resources/images/Drone%20Dispatch%20Flow.drawio.png
+
+https://github.com/zabilal/drone-service/blob/main/src/main/resources/images/System%20Overview.drawio.png
 
 The code has been well tested (> 100 tests) using JUnit and Mockito, H2 in memory database and some standard libraries for the integration tests.
 
@@ -29,7 +31,7 @@ Here below the most relevant features exposed using REST Apis:
 * Define secured accounts that cannot be deleted but only modified
 * Standard validation for email, phone, password
 
-#### Drone Service features: manages roles and permissions
+#### Roll Service features: manages roles and permissions
 
 * Retrieve all the permissions
 * Retrieve the list of the existing roles
@@ -43,6 +45,17 @@ Here below the most relevant features exposed using REST Apis:
 * Retrieve single permission
 * Delete not used permission
 * Api to generate a salt random value to encrypt password (configuration)
+
+#### Drone management features
+
+* Register a new drone
+* Fetch all drones
+* Retrieve a single drone
+* Add medications
+* Load drone with Medications
+* Dispatch loaded drones
+* Get available drones
+* Manage drone dispatch journey
 
 ## REST apis exposed
 Using a browser it's possible to interact with the REST apis with Swagger:
