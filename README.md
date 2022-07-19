@@ -10,10 +10,10 @@ The solution is thought using the Docker technologies with two different contain
 #### System Architecture
 Below are the architecture and flow that came to mind
 
-[System Overview](https://github.com/zabilal/drone-service/blob/main/src/main/resources/images/Drone%20Dispatch%20Flow.drawio.png
-)
-[Dispatch Flow diagram](https://github.com/zabilal/drone-service/blob/main/src/main/resources/images/Drone%20Dispatch%20Flow.drawio.png
-)
+![System Overview](https://github.com/zabilal/drone-service/blob/main/src/main/resources/images/System%20Overview.drawio.png "Overview")
+
+![Dispatch Flow diagram](https://github.com/zabilal/drone-service/blob/main/src/main/resources/images/Drone%20Dispatch%20Flow.drawio.png "Flow")
+
 The code has been well tested (> 100 tests) using JUnit and Mockito, H2 in memory database and some standard libraries for the integration tests.
 
 #### Exposed REST apis
