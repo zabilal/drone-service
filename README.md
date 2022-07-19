@@ -7,6 +7,11 @@ The solution is thought using the Docker technologies with two different contain
 * one Spring Boot REST Apis
 * one MySql 8.0 database
 
+#### System Architecture
+Below are the architecture and flow that came to mind
+
+src/main/resources/images/Drone Dispatch Flow.drawio.png
+
 The code has been well tested (> 100 tests) using JUnit and Mockito, H2 in memory database and some standard libraries for the integration tests.
 
 #### Exposed REST apis
