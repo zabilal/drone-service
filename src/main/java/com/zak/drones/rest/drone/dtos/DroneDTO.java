@@ -1,9 +1,11 @@
 package com.zak.drones.rest.drone.dtos;
 
 import com.zak.drones.rest.drone.entities.Drone;
+import lombok.Data;
 
 import java.io.Serializable;
 
+@Data
 public class DroneDTO implements Serializable {
 
     public DroneDTO(){}

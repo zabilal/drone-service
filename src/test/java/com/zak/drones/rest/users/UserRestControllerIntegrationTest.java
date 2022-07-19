@@ -47,7 +47,7 @@ public class UserRestControllerIntegrationTest {
 
         List<UserDTO> userList = Arrays.asList(user1, user2, user3);
 
-        given(userService.getUserPresentationList()).willReturn(userList);
+        given(userService.getAllUser()).willReturn(userList);
 
         mvc.perform(MockMvcRequestBuilders.get("/users")
                 .contentType(MediaType.APPLICATION_JSON))

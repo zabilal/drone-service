@@ -1,6 +1,8 @@
 package com.zak.drones.rest.drone.repositories;
 
+import com.zak.drones.rest.drone.dtos.DroneDTO;
 import com.zak.drones.rest.drone.entities.Drone;
+import com.zak.drones.rest.drone.entities.DroneState;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
@@ -16,5 +18,6 @@ public interface DroneRepository extends CrudRepository<Drone, Long> {
     Optional<Drone> findBySerialNumber(@Param("serialNumber") String serialNumber);
 
     @Query(value = "SELECT u FROM Drone u WHERE u.state = :state")
-    List<Drone> findAvailableDrones(@Param("state") String state);
+    List<Drone> findAvailableDrones(@Param("state") DroneState state);
+
 }

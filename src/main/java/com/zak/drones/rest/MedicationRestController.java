@@ -26,26 +26,24 @@ public class MedicationRestController {
     private MedicationService medicationService;
 
     @GetMapping
-    public ResponseEntity<MedicationListDTO> getAllMedications() {
+    public ResponseEntity<List<MedicationDTO>> getAllMedications() {
         List<MedicationDTO> list = medicationService.getAllMedications();
-        MedicationListDTO listDTO = new MedicationListDTO();
-        list.forEach(e -> listDTO.getMedicationListDTO().add(e));
-        return ResponseEntity.ok(listDTO);
+        return ResponseEntity.ok(list);
     }
 
     @PostMapping
     public ResponseEntity<MedicationDTO> createMedication(@RequestBody CreateOrUpdateMedicationDTO medicationDTO) {
-        return new ResponseEntity(new MedicationDTO(medicationService.createMedication(medicationDTO)), null, HttpStatus.CREATED);
+        return new ResponseEntity<>(new MedicationDTO(medicationService.createMedication(medicationDTO)), null, HttpStatus.CREATED);
     }
 
     @GetMapping("/{id}")
-    public MedicationDTO getMedicationById(@PathVariable("id") Long id) {
-        return new MedicationDTO(medicationService.getMedicationById(id));
+    public ResponseEntity<MedicationDTO> getMedicationById(@PathVariable("id") Long id) {
+        return new ResponseEntity<>(new MedicationDTO(medicationService.getMedicationById(id)), null, HttpStatus.OK);
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<MedicationDTO> updateMedication(@PathVariable("id") Long id, @RequestBody CreateOrUpdateMedicationDTO updateMedicationDTO) {
-        return new ResponseEntity(new MedicationDTO(medicationService.updateMedication(id, updateMedicationDTO)), null, HttpStatus.CREATED);
+        return new ResponseEntity<>(new MedicationDTO(medicationService.updateMedication(id, updateMedicationDTO)), null, HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{id}")

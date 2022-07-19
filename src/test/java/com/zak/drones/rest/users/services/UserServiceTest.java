@@ -69,7 +69,7 @@ public class UserServiceTest {
 
         given(userService.getUserList()).willReturn(list);
 
-        List<UserDTO> userDTOList = userService.getUserPresentationList();
+        List<UserDTO> userDTOList = userService.getAllUser();
 
         assertNotNull(userDTOList);
         assertEquals(3, userDTOList.size());

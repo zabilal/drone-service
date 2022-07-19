@@ -40,9 +40,9 @@ public class MedicationService {
         // create the Drone
         Medication medication = new Medication();
         medication.setName(medicationDTO.getName());
-        medication.setCode(medication.getCode());
-        medication.setWeight(medication.getWeight());
-        medication.setImageUrl(medication.getImageUrl());
+        medication.setCode(medicationDTO.getCode());
+        medication.setWeight(medicationDTO.getWeight());
+        medication.setImageUrl(medicationDTO.getImageUrl());
 
         Medication createdMedication = medicationRepository.save(medication);
 
